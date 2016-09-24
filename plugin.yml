@@ -1,0 +1,39 @@
+name: FramePicture
+version: 1.8.7
+author: Howaner, m0bY_czE
+website: http://howaner.de
+description: You can set Pictures in Frames
+depend: [ProtocolLib]
+softdepend: [Vault,WorldGuard,Multiverse-Core]
+main: de.howaner.FramePicture.FramePicturePlugin
+
+commands:
+  FramePicture:
+    description: FramePicture Command
+    usage: /<command> <set/multiset/get/reload>
+    aliases: [fp]
+permissions:
+  FramePicture.*:
+    description: Give all Permissions for FramePicture
+    children:
+      FramePicture.set: true
+      FramePicture.multiset: true
+      FramePicture.get: true
+      FramePicture.reload: true
+      FramePicture.ignoreWorldGuard: true
+    default: op
+  FramePicture.set:
+    description: Permission to place a Picture in a Frame
+    default: op
+  FramePicture.multiset:
+    description: Permission to create a Picture Wand
+    default: op
+  FramePicture.get:
+    description: Permission to show Infos from a Frame
+    default: true
+  FramePicture.reload:
+    description: Permission to reload the FramePicture config
+    default: op
+  FramePicture.ignoreWorldGuard:
+    description: Ignore WorldGuard Check
+    default: op
